@@ -1,0 +1,324 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  
+}
+main {background-color: #0088cc0c}
+header a {
+    text-decoration: none;
+    margin-right:1rem;
+    color: #eeeeee; 
+    font-weight: 900;  
+}
+.login ,.col-4 {
+    display: flex;
+    align-items: center;
+}
+.logo{
+   width: 7.5rem;
+}
+header div span a:hover {
+    color: #0088cc;
+}
+.col-5 {
+    display: flex;
+    gap: 10px;  
+}
+header {
+    height: 9rem;
+    background-color:#000000;
+    
+    
+    
+}
+
+/* searchbar */
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+   }
+   
+   .input {
+    width: ;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+   }
+   
+   .input::placeholder {
+    color: #9e9ea7;
+   }
+   
+   .input:focus, input:hover {
+    outline: none;
+    border-color: #0088cc;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(0 136 204 / 10%);
+   }
+   
+   .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+   }
+
+   /* navbar ul animation */
+ul li button {
+    font-size: 18px;
+    color: #666666;
+    font-family: inherit;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  ul li button:focus,
+  ul li button:hover {
+    color:	#979797;
+  }
+  
+  ul li button:focus:after,
+  ul li button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  ul li button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #0088cc;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+  nav ul li {
+    list-style-type: none;
+  }
+
+
+   h1 ,h2 {
+    color: #131130;
+   }
+
+   h4 {
+    color:#eeeeee;
+   }
+   .slide-frame{
+    height: 450px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid; 
+    place-items: center;
+    overflow: hidden;
+    border-radius: 1rem;
+   }
+   .slide-images{
+    display: flex;
+    width: calc(450px * 18);
+    animation: scroll 40s linear infinite;
+   }
+   .slide-images:hover{
+    animation-play-state: paused;
+   }
+
+   @keyframes scroll {
+    0%{
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-450px * 9));
+    }
+   }
+   .image-container{
+    height: 300px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    padding:0;
+    perspective: 100px;
+   }
+   section div div img {
+    width: 100%;
+    transition: transform 1s;
+   }
+   section div div img:hover{
+    transform: translateZ(20px);
+   }
+   .slide-frame::before,.slide-frame::after{
+    background: linear-gradient(to right, #0088cc39 0%,rgb(255,255,255,0) 100%);
+    content:'';
+    height: 100%;
+    position: absolute;
+    width: 8%;
+    z-index: 2;
+  
+   }
+   .slide-frame::before{
+    left:0;
+    top: 0;
+   }
+   .slide-frame::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+   }
+   
+   /* aside social media handels */
+aside ol {
+    list-style-type: none;
+    padding: 0.7rem;
+    background-color: #010101eb;
+    width:3.3rem;
+    border-radius: 0rem 1rem 0.5rem 1.2rem;
+    font-size: 1.8rem;
+    border-right: #0088cc solid 0.24rem;
+    position: fixed;
+    left: 0;
+    top: 27rem;
+    z-index: 1;
+    
+}
+aside ol li a {
+    color: white;
+     
+}
+
+ aside ol li a:hover {
+    color: #0088cc;
+    transform: translate(-0.2rem,-0.2rem);
+    box-shadow: -0.1rem 0.1rem 1rem rgb(0, 0, 0); 
+ } 
+ 
+ .picturesection{
+  margin-top: 5rem;
+ }
+   
+.wrapper{
+  max-height: 50rem;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  padding-left: 10%;
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+   .wrapper::-webkit-scrollbar{
+    width:0;
+   } 
+
+   .wrapper .cards{
+    min-width: 20rem;
+    height: 28rem;
+    line-height: 110px; 
+    margin-left: 2px;
+    border-radius: 2rem;
+    transition: 0.01s, 0.01s 0.01s;
+   
+   }
+   .cards:hover {
+    min-width: 21rem;
+    height: 29rem;
+    box-shadow: 1px 4px 18px  rgba(0, 0, 0, 0.65);
+   }
+   .one {
+    background-image: url(/Images/Colorful\ Summer\ Party\ .svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   .two {
+    background-image: url(/Images/Pink\ \ Night\ Concert\ .svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   .three {
+    background-image: url(/Images/all\ white\ boat\ party.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   .four {
+    background-image: url(/Images/concert-guitar.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   .five {
+    background-image: url(/Images/Colorful\ Summer\ Party\ .svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   .six {
+    background-image: url(/Images/hamburg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   .seven {
+    background-image: url(/Images/Pink\ \ Night\ Concert\ .svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   .eight {
+    background-image: url(/Images/Memphis\ Music\ Festival\ .svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+
+   .videosection{
+    margin-top: 5rem;
+   }
+
+   .wrappervideo{
+    max-height: 50rem;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    padding-left: 10%;
+    gap: 5rem;
+  }
+     .wrappervideo::-webkit-scrollbar{
+      width:0;
+     } 
+  
+     .wrappervideo video{
+      min-width: 50rem;
+      height: 35rem;
+      line-height: 110px; 
+      margin-left: 2px;
+   }
+   footer {
+    background-color: #0088cc;
+    width: 100%;
+  height: 50vh;
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+justify-items: center;
+   }
+
+
+
+   
+   
